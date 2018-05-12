@@ -36,7 +36,7 @@ and open the template in the editor.
                 <div class="row">                        
 
                     <div class="col-md-12">
-                        <a type="button" class="btn btn-primary btn-block btn-flat verdeExaudi" id="btnLoguin" href="?Page=Screen3">Aceptar</a>
+                        <input type="button" class="btn btn-primary btn-block btn-flat verdeExaudi" id="btnLoguin" value="Aceptar" onclick="saveScreen2();">
                     </div>
 
                     <div class="col-md-12">

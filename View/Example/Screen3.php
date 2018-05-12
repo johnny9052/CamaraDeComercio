@@ -14,6 +14,8 @@ and open the template in the editor.
 
 
         <script type="text/javascript" src="Resource/Script/Security/LogIn.js"></script>
+        
+        <script src="Resource/Script/Example/screen3.js" type="text/javascript"></script>
     </head>
     <body class="hold-transition login-page">
 

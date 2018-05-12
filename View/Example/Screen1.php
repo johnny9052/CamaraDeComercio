@@ -26,12 +26,12 @@ and open the template in the editor.
                 <label>Proyecto Camara de comercio</label>
             </div>
 
-            <div class="login-box-body">
+            <div class="login-box-body" >
                 <p class="login-box-msg">Informacion basica</p>
 
                 <form  id="FormContainer">
                     <div class="form-group has-feedback">
-                        <input type="text" id="txtNit" name="user" class="form-control" placeholder="Nit" required onkeypress="return activarViaEnter(event);">
+                        <input type="number" id="txtNit" name="user" class="form-control" placeholder="Nit" required onkeypress="return activarViaEnter(event);">
                         <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     </div>
                     <div class="form-group has-feedback">
@@ -43,9 +43,9 @@ and open the template in the editor.
                         <div class="form-group">                            
                             <select id="selDepartamento" name="rol" required class="form-control select2" style="width: 100%;">
                                 <option value="-1" selected> -- SELECCIONE DEPARTAMENTO --</option> 
-                                <option value="-1" >CALDAS</option> 
-                                <option value="-1" >RISARALDA</option> 
-                                <option value="-1" >QUINDIO</option> 
+                                <option value="1" >CALDAS</option> 
+                                <option value="1" >RISARALDA</option> 
+                                <option value="1" >QUINDIO</option> 
                             </select>
                         </div>
                     </div>
@@ -55,16 +55,16 @@ and open the template in the editor.
                         <div class="form-group">                            
                             <select id="selMunicipio" name="rol" required class="form-control select2" style="width: 100%;">
                                 <option value="-1" selected> -- SELECCIONE MUNICIPIO --</option>  
-                                <option value="-1" >ARMENIA</option>                            
-                                <option value="-1" >DOSQUEBRADAS</option>                            
-                                <option value="-1" >MANIZALES</option>                            
-                                <option value="-1" >PEREIRA</option>     
+                                <option value="1" >ARMENIA</option>                            
+                                <option value="1" >DOSQUEBRADAS</option>                            
+                                <option value="1" >MANIZALES</option>                            
+                                <option value="1" >PEREIRA</option>     
                             </select>
                         </div>
                     </div>
 
                     <div class="form-group has-feedback">
-                        <input type="number" id="txtSucursales" name="user" class="form-control" placeholder="Numero de sucursales" required onkeypress="return activarViaEnter(event);">
+                        <input type="number" id="txtSucursales" name="user" class="form-control" placeholder="Numero de sucursales" required onkeypress="return activarViaEnter(event);" min="1" max="100">
                         <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     </div>
 
