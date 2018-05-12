@@ -1,5 +1,24 @@
 
 
+$(document).ready(function () {
+    /*Se obtienen los datos almacenados en cache, y parseando el JSON a un objeto*/
+    try {
+        var obj = JSON.parse(localStorage['objRenovacionRegistroMercantilSecurity']);
+
+        console.log(obj.imageRoute);
+        if (obj.imageRoute) {
+            $("#pic").attr('src', obj.imageRoute);
+        } else {
+            $("#pic").css("display", "none");
+        }
+    } catch (e) {
+        $("#pic").css("display", "none");
+    }
+
+});
+
+
+
 function saveScreen1() {
 
     /*Funcion que valida todos los campos que se encuentren internos al 

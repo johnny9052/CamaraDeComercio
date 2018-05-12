@@ -14,7 +14,9 @@ and open the template in the editor.
 
 
         <script type="text/javascript" src="Resource/Script/Security/LogIn.js"></script>
+        <script src="Resource/Script/Example/Security.js" type="text/javascript"></script>
     </head>
+    
     <body class="hold-transition login-page">
 
 
@@ -74,7 +76,7 @@ and open the template in the editor.
                 <form  id="FormContainer">
                     <div class="row">                                                
                         <div class="col-md-12">
-                            <a class="btn btn-primary btn-block btn-danger verdeExaudi" id="btnLoguin" href="?Page=Screen1">Ingresar con GMAIL</a>
+                            <input type="button" onclick="logInGmail();" class="btn btn-primary btn-block btn-danger verdeExaudi" id="btnLoguin" value="Ingresar con GMAIL">
                         </div>                      
                     </div>
                     <br>

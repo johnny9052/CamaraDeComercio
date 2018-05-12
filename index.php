@@ -11,6 +11,16 @@ session_start();
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
+        <!-- TOKEN PARA HABILITAR EL LOGIN, EL CUAL ES GENERADO EN 
+         https://console.developers.google.com
+           (VER VIDEO PARA LA GENERACION DEL TOKEN)
+        -->
+        <meta name="google-signin-client_id" 
+              content="715584167713-osjbpmebcg4cuo5jbck4hnv3cetg92ba.apps.googleusercontent.com">
+
+        <!-- JAVASCRIPT DE GOOGLE-->
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+
 
         <link rel="shortcut icon" type="image/png" href="Resource/Images/Public/favicon.ico"/>
         <link href="Resource/Style/General.css" rel="stylesheet" type="text/css"/>
@@ -52,11 +62,18 @@ session_start();
               } */
 
             if (isset($_GET['Page'])) {
-                include("View/Example/".$_GET['Page'] . ".php");
+                include("View/Example/" . $_GET['Page'] . ".php");
             } else {
                 include("View/Security/LogIn.php");
             }
             ?>
+
+
+            <!-- CODIGO POR DEFECTO PARA COLOCAR EL BOTON DE GMAIL PARA LOGIN, EL CUAL 
+                   SE ENCARGA DE TODO, Y CUANDO SE IDENTIFIE CORRECTAMENTE LLAMARA A LA 
+                   FUNCION onSignIn EN LA CUAL UNO IMPLEMENTA LO QUE UNO QUIERA-->
+            <!-- SE OCULTO PARA QUE PUEDA SER ACTIVADO CON EL OTRO BOTON -->
+            <div style="display: none" id="btnLogInGmail" class="g-signin2" data-onsuccess="onSignIn"></div>
 
             <label>
                 <?php
@@ -86,6 +103,8 @@ session_start();
             </div>            
         </div>
         <!--END MODAL GENERICO PARA MOSTRAR MENSAJES -->
+
+
 
 
 

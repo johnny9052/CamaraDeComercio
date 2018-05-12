@@ -14,16 +14,17 @@ and open the template in the editor.
 
 
         <script type="text/javascript" src="Resource/Script/Security/LogIn.js"></script>
-        
+
         <script src="Resource/Script/Example/screen1.js" type="text/javascript"></script>
-        
+
     </head>
     <body class="hold-transition login-page">
 
 
         <div class="login-box">
             <div class="login-logo">
-                <label>Proyecto Camara de comercio</label>
+                <label>Proyecto Camara de comercio</label>                
+                <img id="pic" class="img-circle" width="100" height="100"/>
             </div>
 
             <div class="login-box-body" >
@@ -32,7 +33,7 @@ and open the template in the editor.
                 <form  id="FormContainer">
                     <div class="form-group has-feedback">
                         <input type="number" id="txtNit" name="user" class="form-control" placeholder="Nit" required onkeypress="return activarViaEnter(event);">
-                        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                        <span class="glyphicon glyphicon-tag form-control-feedback"></span>
                     </div>
                     <div class="form-group has-feedback">
                         <input type="text" id="txtNombreRepresentante" name="user" class="form-control" placeholder="Nombre representante legal" required onkeypress="return activarViaEnter(event);">
@@ -65,7 +66,7 @@ and open the template in the editor.
 
                     <div class="form-group has-feedback">
                         <input type="number" id="txtSucursales" name="user" class="form-control" placeholder="Numero de sucursales" required onkeypress="return activarViaEnter(event);" min="1" max="100">
-                        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                        <span class="glyphicon glyphicon-home form-control-feedback"></span>
                     </div>
 
                     <div class="row">                        

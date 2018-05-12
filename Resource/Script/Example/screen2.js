@@ -17,7 +17,7 @@ function buildSucursales(totalSucursales) {
     /*Se coloca el campo de total activos, debido a que siempre va*/
     var estructura = '<div class="form-group has-feedback">' +
             '<input type="number" id="txtTotalActivos" placeholder="Total activos" required class="form-control" required>' +
-            '<span class="glyphicon glyphicon-user form-control-feedback"></span>' +
+            '<span class="glyphicon glyphicon-list form-control-feedback"></span>' +
             '</div>';
 
     /*Por cada sucursal, se generan 3 campos (ActivosSucursal, Departamento, Municipio)*/
@@ -26,7 +26,7 @@ function buildSucursales(totalSucursales) {
                 '<div class="box box-primary">' +
                 '<div class="form-group has-feedback">' +
                 '<input type="number" id="txtActivosSucursal' + x + '" class="form-control" placeholder="Activos sucursal ' + x + '" required>' +
-                '<span class="glyphicon glyphicon-user form-control-feedback"></span>' +
+                '<span class="glyphicon glyphicon glyphicon-usd form-control-feedback"></span>' +
                 '</div>' +
                 '<div class="form-group">' +
                 '<select id="selDepartamento' + x + '" required class="form-control" style="width: 100%;">' +
@@ -69,7 +69,7 @@ function saveScreen2() {
 
         /*Se recorre cada grupo de sucursales para ir almacenado valor por valor
          * en los arrays definidos*/
-        for (var x = 1; x < totalSucursales; x++) {
+        for (var x = 1; x <= totalSucursales; x++) {
             activosSucursales.push($("#txtActivosSucursal" + x).val());
             departamentoSucursales.push($("#selDepartamento" + x).val());
             municipioSucursales.push($("#selMunicipio" + x).val());
