@@ -16,7 +16,7 @@ function saveScreen1() {
         sucursales: sucursales
     };
 
-    localStorage['objRenovacionRegistroMercantil'] = JSON.stringify(obj); // only strings
+    localStorage['objRenovacionRegistroMercantilScreen1'] = JSON.stringify(obj); // only strings
 
     location.href = "?Page=Screen2";
 
