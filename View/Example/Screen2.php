@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Identificacion usuarios</title>
+        <title>Identificación usuarios</title>
 
         <!-- iCheck -->
         <link rel="stylesheet" href="Resource/plugins/iCheck/square/blue.css">
@@ -22,7 +22,7 @@ and open the template in the editor.
 
         <div class="login-box">
             <div class="login-logo">
-                <label>Proyecto Camara de comercio</label>
+                <label>Proyecto Cámara de Comercio</label>
             </div>
 
             <div class="login-box-body">

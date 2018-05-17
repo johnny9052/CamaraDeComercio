@@ -7,14 +7,14 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Identificacion usuarios</title>
+        <title>Identificación usuarios</title>
 
         <!-- iCheck -->
         <link rel="stylesheet" href="Resource/plugins/iCheck/square/blue.css">
 
 
         <script type="text/javascript" src="Resource/Script/Security/LogIn.js"></script>
-        
+
         <script src="Resource/Script/Example/screen3.js" type="text/javascript"></script>
     </head>
     <body class="hold-transition login-page">
@@ -22,11 +22,11 @@ and open the template in the editor.
 
         <div class="login-box">
             <div class="login-logo">
-                <label>Proyecto Camara de comercio</label>
+                <label>Proyecto Cámara de comercio</label>
             </div>
 
             <div class="login-box-body">
-                <p class="login-box-msg">Desea certificados actualizados</p>
+                <p class="login-box-msg">¿Desea certificados de?</p>
 
                 <form  id="FormContainer">
 
@@ -34,39 +34,77 @@ and open the template in the editor.
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
+                                <label>
+                                    <input type="checkbox" class="certificadoMatriculaMercantil"/>
+                                    <span>Matrícula Mercantil</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
 
                                 <input id="txtFirstName" name="firstName" class="form-control" type="text" value="" autocomplete="off" required
-                                       placeholder="¿Cuantos?">
+                                       placeholder="¿Cuántos?">
                             </div>
-                        </div>                       
+                        </div>  
 
-                        <div class="col-md-6">
-                            <a type="button" class="btn btn-primary btn-block btn-flat verdeExaudi" id="btnLoguin" href="?Page=Screen4">Si</a>
-                        </div>     
                     </div>
-
-
                     <div class="row">
                         <div class="col-md-6">
-
-                        </div>                       
-
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" class="certificadoExistencia"/>
+                                    <span>Existencia</span>
+                                </label>
+                            </div>
+                        </div>
                         <div class="col-md-6">
-                            <a type="button" class="btn btn-primary btn-block btn-flat verdeExaudi" id="btnLoguin" href="?Page=Screen4">No</a>
-                        </div>     
+                            <div class="form-group">
+
+                                <input id="txtFirstName" name="firstName" class="form-control" type="text" value="" autocomplete="off" required
+                                       placeholder="¿Cuántos?">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" class="certificadoEspecial" />
+                                    <span>Especial</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+
+                                <input id="txtFirstName" name="firstName" class="form-control" type="text" value="" autocomplete="off" required
+                                       placeholder="¿Cuántos?">
+                            </div>
+                        </div>
+
                     </div>
 
-
-                    <br>
-
-                   
-                </form>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a type="button" class="btn btn-primary btn-block btn-flat verdeExaudi" id="btnLoguin" href="?Page=Screen4">Aceptar</a>
+                        </div>     
+                    </div>
 
 
             </div>
 
+
+            <br>
+
+
+            </form>
+
+
         </div>
 
+    </div>
 
 
 
@@ -74,14 +112,15 @@ and open the template in the editor.
 
 
 
-        <script>
-            $(function () {
-                $('input').iCheck({
-                    checkboxClass: 'icheckbox_square-blue',
-                    radioClass: 'iradio_square-blue',
-                    increaseArea: '20%' // optional
-                });
+
+    <script>
+        $(function () {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_square-blue',
+                radioClass: 'iradio_square-blue',
+                increaseArea: '20%' // optional
             });
-        </script>
-    </body>
+        });
+    </script>
+</body>
 </html>
