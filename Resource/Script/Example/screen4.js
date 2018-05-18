@@ -23,6 +23,6 @@ function sendDataApp() {
 }
 
 
-function queHacerConElResultado(info) {
-    $("#lblResultado").html(info);
+function queHacerConElResultado(info) {    
+    $("#lblResultado").html(info.nombre);
 }
