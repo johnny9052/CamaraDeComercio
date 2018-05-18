@@ -11,9 +11,9 @@ and open the template in the editor.
 
         <!-- iCheck -->
         <link rel="stylesheet" href="Resource/plugins/iCheck/square/blue.css">
-
-
         <script type="text/javascript" src="Resource/Script/Security/LogIn.js"></script>
+        <script src="Resource/Script/Example/screen4.js" type="text/javascript"></script>
+        
     </head>
     <body class="hold-transition login-page">
 
@@ -24,7 +24,7 @@ and open the template in the editor.
             </div>
 
             <div class="login-box-body">
-                <p class="login-box-msg">$XXXXXXXXXXXxxxx</p>            
+                <p class="login-box-msg" id="lblResultado">$XXXXXXXXXXXxxxx</p>            
             </div>
 
         </div>

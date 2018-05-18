@@ -30,12 +30,13 @@ and open the template in the editor.
 
                 <form  id="FormContainer">
 
-
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
+                                <input id="chkMatriculaMercantil" name="matriculaMercantil" 
+                                       type="checkbox" value="txtMatriculaMercantil" 
+                                       onclick="enabledDisabled('txtMatriculaMercantil');" />
                                 <label>
-                                    <input type="checkbox" class="certificadoMatriculaMercantil"/>
                                     <span>Matrícula Mercantil</span>
                                 </label>
                             </div>
@@ -43,7 +44,7 @@ and open the template in the editor.
                         <div class="col-md-6">
                             <div class="form-group">
 
-                                <input id="txtFirstName" name="firstName" class="form-control" type="text" value="" autocomplete="off" required
+                                <input id="txtMatriculaMercantil" disabled name="firstName" class="form-control" type="text" value="" autocomplete="off" required
                                        placeholder="¿Cuántos?">
                             </div>
                         </div>  
@@ -52,16 +53,17 @@ and open the template in the editor.
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>
-                                    <input type="checkbox" class="certificadoExistencia"/>
+                                <input id="chkExistencia" name="existencia" 
+                                       type="checkbox" class="certificadoExistencia" 
+                                       value="txtExistencia" onchange="enabledDisabled('txtCertificadoEspecial');"/>
+                                <label>                                   
                                     <span>Existencia</span>
                                 </label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-
-                                <input id="txtFirstName" name="firstName" class="form-control" type="text" value="" autocomplete="off" required
+                                <input id="txtExistencia" disabled name="firstName" class="form-control" type="text" value="" autocomplete="off" required
                                        placeholder="¿Cuántos?">
                             </div>
                         </div>
@@ -69,17 +71,18 @@ and open the template in the editor.
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <label>
-                                    <input type="checkbox" class="certificadoEspecial" />
+                            <div class="form-group" class="checkboxValidation">
+                                <input id="chkCertificadoEspecial"  name="certificadoEspecial" 
+                                       type="checkbox" class="certificadoEspecial" 
+                                       value="txtCertificadoEspecial"/>
+                                <label>                                  
                                     <span>Especial</span>
                                 </label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-
-                                <input id="txtFirstName" name="firstName" class="form-control" type="text" value="" autocomplete="off" required
+                                <input id="txtCertificadoEspecial" disabled name="firstName" class="form-control" type="text" value="" autocomplete="off" required
                                        placeholder="¿Cuántos?">
                             </div>
                         </div>
@@ -87,19 +90,15 @@ and open the template in the editor.
                     </div>
 
                     <div class="row">
-                        <div class="col-md-12">
-                            <a type="button" class="btn btn-primary btn-block btn-flat verdeExaudi" id="btnLoguin" href="?Page=Screen4">Aceptar</a>
+                        <div class="col-md-12">                            
+                            <input type="button" class="btn btn-primary btn-block btn-flat verdeExaudi" id="btnLoguin" value="Aceptar" onclick="saveScreen3();">
                         </div>     
                     </div>
 
-
+                </form>
             </div>
 
 
-            <br>
-
-
-            </form>
 
 
         </div>

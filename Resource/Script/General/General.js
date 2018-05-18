@@ -3,7 +3,6 @@ $(document).ready(function () {
     $.fn.modal.Constructor.DEFAULTS.backdrop = 'static';
     $.fn.modal.Constructor.DEFAULTS.keyboard = false;
 
-
     /*Se inicializan los campos de fecha*/
     $('.dateAction').datepicker({
         autoclose: true
@@ -92,8 +91,8 @@ function showLoadBar(status) {
  */
 function Execute(dataSend, url, before, success) {
 
-    console.log("Lo que se envia: "+dataSend);
-
+    console.log("Lo que se envia: " + dataSend);
+    console.log(url);
 
     //alert("ffsfsdfsd");
     $.ajax({
