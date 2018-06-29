@@ -23,6 +23,9 @@ function sendDataApp() {
 }
 
 
-function queHacerConElResultado(info) {    
+function queHacerConElResultado(info) { 
+    
+    console.log(info);
+    
     $("#lblResultado").html(info.nombre);
 }

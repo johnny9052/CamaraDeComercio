@@ -32,17 +32,17 @@ function buildSucursales(totalSucursales) {
                 '<select id="selDepartamento' + x + '" required class="form-control" style="width: 100%;">' +
                 '<option value="-1" selected> -- SELECCIONE DEPARTAMENTO --</option>' +
                 '<option value="1" >CALDAS</option>' +
-                '<option value="1" >RISARALDA</option>' +
-                '<option value="1" >QUINDIO</option>' +
+                '<option value="2" >RISARALDA</option>' +
+                '<option value="3" >QUINDIO</option>' +
                 '</select>' +
                 '</div>' +
                 '<div class="form-group">' +
                 '<select id="selMunicipio' + x + '"  required class="form-control" style="width: 100%;">' +
                 '<option value="-1" > -- SELECCIONE MUNICIPIO --</option>' +
                 '<option value="1" >ARMENIA</option>' +
-                '<option value="1" >DOSQUEBRADAS</option>' +
-                '<option value="1" >MANIZALES</option>' +
-                '<option value="1" >PEREIRA</option>' +
+                '<option value="2" >DOSQUEBRADAS</option>' +
+                '<option value="3" >MANIZALES</option>' +
+                '<option value="4" >PEREIRA</option>' +
                 '</select>' +
                 '</div>' +
                 '</div>';
