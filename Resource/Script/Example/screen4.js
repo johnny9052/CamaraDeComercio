@@ -49,7 +49,7 @@ function queHacerConElResultado(info) {
 
     $("#FormContainer").html(estructuraPagoSucursales);
 
-
+        
     $("#txtPagoTotal").val(info.pagoTotal);
     $("#txtPagoPrincipal").val(info.pagoPrincipal);
     $("#txtPagoFormularios").val(info.pagoFormularios);

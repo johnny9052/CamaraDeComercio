@@ -213,9 +213,11 @@ if ($cantidadSucursales > 0) {
 }
 
 
+setlocale(LC_MONETARY, 'en_US');
+
 
 $array = ([
-    "pagoTotal" => $pagoTotal,
+    "pagoTotal" => money_format('%(#10n', $pagoTotal),
     "pagoPrincipal" => "$res",
     "arrayPagoSucursales" => json_encode($pagoSucursales),
     "pagoFormularios" => "$totalFormularios",
