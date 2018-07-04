@@ -186,6 +186,7 @@ if ($cantidadSucursales > 0) {
     }
 
     /* Calcula el total de pago por sucursales */
+    $pagoTotalSucursales=0;
     for ($i = 0; $i < $cantidadSucursales; $i++) {
         $pagoTotalSucursales += $pagoSucursales[$i];
     }
