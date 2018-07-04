@@ -23,9 +23,38 @@ function sendDataApp() {
 }
 
 
-function queHacerConElResultado(info) { 
-    
+function queHacerConElResultado(info) {
+
     console.log(info);
-    
-    $("#lblResultado").html(info.nombre);
+
+
+    var estructuraPagoSucursales = $("#FormContainer").html();
+    var contSuc = 1;
+
+    var arrayPagoSucursales = (((info.arrayPagoSucursales).replace("[", "")).replace("]", "")).split(",");
+
+    arrayPagoSucursales.forEach(function (data) {
+        estructuraPagoSucursales = estructuraPagoSucursales +
+                "<div class='row'><div class='col-md-6'><div class='form-group'><label><span>Sucursal " + contSuc + "</span></label></div></div><div class='col-md-6'><div class='form-group'><input id='txtSucursal" + contSuc + "' disabled name='Sucursal" + contSuc + "' class='form-control' type='text' value='" + data + "' autocomplete='off' required></div></div></div>"
+        contSuc++;
+    });
+
+    estructuraPagoSucursales = estructuraPagoSucursales + "<div class='row'><div class='col-md-12'><input type='button' class='btn btn-primary btn-block btn-flat verdeExaudi' id='btnLoguin' value='Aceptar' onclick='saveScreen3();'></div></div>";
+
+
+    $("#FormContainer").html(estructuraPagoSucursales);
+
+
+    $("#txtPagoTotal").val(info.pagoTotal);
+    $("#txtPagoPrincipal").val(info.pagoPrincipal);
+    $("#txtPagoFormularios").val(info.pagoFormularios);
+    $("#txtPagoCertificadosMatricula").val(info.pagoCertificadosMatricula);
+    $("#txtPagoCertificadosExistencia").val(info.pagoCertificadosExistencia);
+    $("#txtPagoCertificadoEspecial").val(info.pagoCertificadosEspecial);
+
+
+
+
+
+
 }

@@ -159,7 +159,7 @@ if ($totalActivos > 0 and $totalActivos <= ($smmlv * 2)) {
     $res = $smmlv * 2.5979;
 }
 
-/* Determina el valor a pagar por los activos de cada sucursal de la empresa*/
+/* Determina el valor a pagar por los activos de cada sucursal de la empresa */
 $pagoSucursales;            //Almacena el pago por cada una de las sucursales
 if ($cantidadSucursales > 0) {
     $arrayActivosSucursales = $objetoParte2->{'activosSucursales'};
@@ -176,48 +176,54 @@ if ($cantidadSucursales > 0) {
         } else {
             $totalFormularios += $valorFormulario;
             if ($arrayActivosSucursales[$i] >= 0 and $arrayActivosSucursales[$i] < (3 * $smmlv)) {
-                $pagoSucursales[$i]= ($smmlv * 0.1119);
+                $pagoSucursales[$i] = ($smmlv * 0.1119);
             } elseif ($arrayActivosSucursales[$i] > (3 * $smmlv) and $arrayActivosSucursales[$i] < (17 * $smmlv)) {
-                $pagoSucursales[$i]= ($smmlv * 0.1678);
+                $pagoSucursales[$i] = ($smmlv * 0.1678);
             } else {
-                $pagoSucursales[$i]= ($smmlv * 0.2237);
+                $pagoSucursales[$i] = ($smmlv * 0.2237);
             }
         }
     }
-    
-   /* Calcula el total de pago por sucursales*/
+
+    /* Calcula el total de pago por sucursales */
     for ($i = 0; $i < $cantidadSucursales; $i++) {
         $pagoTotalSucursales += $pagoSucursales[$i];
     }
-    
-    /* Determina el total a pagar por certificados*/
-    
+
+    /* Determina el total a pagar por certificados */
+
     $max = sizeof($numeroCertificados);
     for ($i = 0; $i < $max; $i++) {
-        if($numeroCertificados[$i]==="matriculaMercantil"){
-            $certificadoMatriculaMercantil = $numeroCertificados[$i+1];
-        }elseif ($numeroCertificados[$i]==="existencia") {
-            $certificadoExistencia = $numeroCertificados[$i+1];
-        }elseif ($numeroCertificados[$i]==="certificadoEspecial") {
-            $certificadoEspecial = $numeroCertificados[$i+1];
+        if ($numeroCertificados[$i] === "matriculaMercantil") {
+            $certificadoMatriculaMercantil = $numeroCertificados[$i + 1];
+        } elseif ($numeroCertificados[$i] === "existencia") {
+            $certificadoExistencia = $numeroCertificados[$i + 1];
+        } elseif ($numeroCertificados[$i] === "certificadoEspecial") {
+            $certificadoEspecial = $numeroCertificados[$i + 1];
         }
     }
-    
-    $valorCerttificadosMatricula = $certificadoMatriculaMercantil * ($smmlv*0.0035);
-    $valorCertificadosExistencia = $certificadoExistencia * ($smmlv*0.0070);
+
+    $valorCerttificadosMatricula = $certificadoMatriculaMercantil * ($smmlv * 0.0035);
+    $valorCertificadosExistencia = $certificadoExistencia * ($smmlv * 0.0070);
     $valorCertificadosEspecial = $certificadoEspecial * ($smmlv * 0.0070);
     $pagoTotalCertificados = $valorCertificadosEspecial + $valorCertificadosExistencia + $valorCerttificadosMatricula;
-    
+
     $pagoTotal = $res + $pagoTotalSucursales + $totalFormularios + $pagoTotalCertificados;
 }
 
 
 
-echo(json_encode(['res' => 'Success', "msg" => $pagoTotal, 
+$array = ([
+    "pagoTotal" => $pagoTotal,
     "pagoPrincipal" => "$res",
-    "arrayPagoSucursales" => "$pagoSucursales",
+    "arrayPagoSucursales" => json_encode($pagoSucursales),
     "pagoFormularios" => "$totalFormularios",
     "pagoCertificadosMatricula" => "$valorCerttificadosMatricula",
     "pagoCertificadosExistencia" => "$valorCertificadosExistencia",
-    "pagoCertificadosEspecial" => "$valorCertificadosEspecial",
-    ]));
+    "pagoCertificadosEspecial" => "$valorCertificadosEspecial"
+        ]);
+
+
+
+echo(json_encode(['res' => 'Success', "msg" => 'Valor calculado correctamente',
+    "data" => json_encode($array)]));
