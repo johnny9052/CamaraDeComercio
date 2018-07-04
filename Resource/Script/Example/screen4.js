@@ -39,7 +39,12 @@ function queHacerConElResultado(info) {
         contSuc++;
     });
 
-    estructuraPagoSucursales = estructuraPagoSucursales + "<div class='row'><div class='col-md-12'><input type='button' class='btn btn-primary btn-block btn-flat verdeExaudi' id='btnLoguin' value='Aceptar' onclick='saveScreen3();'></div></div>";
+    estructuraPagoSucursales = estructuraPagoSucursales + "<div class='row'>\n\
+                                                               <div class='col-md-12'>\n\
+                                                                  <input type='button' class='btn btn-primary btn-block \n\
+                                                                  btn-flat verdeExaudi' id='btnImprimir' value='Aceptar' onclick='imprimir();'>\n\
+                                                               </div>\n\
+                                                           </div>";
 
 
     $("#FormContainer").html(estructuraPagoSucursales);
