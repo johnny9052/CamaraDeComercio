@@ -217,7 +217,7 @@ setlocale(LC_MONETARY, 'en_US');
 
 
 $array = ([
-    "pagoTotal" => money_format('%(#10n', $pagoTotal),
+    "pagoTotal" => "$ ".number_format($pagoTotal, 0),
     "pagoPrincipal" => "$res",
     "arrayPagoSucursales" => json_encode($pagoSucursales),
     "pagoFormularios" => "$totalFormularios",
