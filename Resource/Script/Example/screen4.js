@@ -31,7 +31,7 @@ function queHacerConElResultado(info) {
     var estructuraPagoSucursales = $("#FormContainer").html();
     var contSuc = 1;
 
-    var arrayPagoSucursales = (((info.arrayPagoSucursales).replace("[", "")).replace("]", "")).split(",");
+    var arrayPagoSucursales = ((((info.arrayPagoSucursales).replace("[", "")).replace("]", "")).replace(/"/g, "")).split(",");
 
     arrayPagoSucursales.forEach(function (data) {
         estructuraPagoSucursales = estructuraPagoSucursales +

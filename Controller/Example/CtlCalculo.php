@@ -184,6 +184,9 @@ if ($cantidadSucursales > 0) {
             }
         }
     }
+    
+    
+    
 
     /* Calcula el total de pago por sucursales */
     $pagoTotalSucursales=0;
@@ -210,20 +213,27 @@ if ($cantidadSucursales > 0) {
     $pagoTotalCertificados = $valorCertificadosEspecial + $valorCertificadosExistencia + $valorCerttificadosMatricula;
 
     $pagoTotal = $res + $pagoTotalSucursales + $totalFormularios + $pagoTotalCertificados;
+    
+    /*Adiciona signo pesos a los pagoSucursales*/
+    setlocale(LC_MONETARY, 'en_US');
+    for ($i = 0; $i < $cantidadSucursales; $i++) {
+        $pagoSucursales[$i] = round($pagoSucursales[$i]);
+        $pagoSucursales[$i] = "$ ".number_format($pagoSucursales[$i], 0, '', '.');
+    }
 }
 
 
-setlocale(LC_MONETARY, 'en_US');
+
 
 
 $array = ([
-    "pagoTotal" => "$ ".number_format($pagoTotal, 0),
-    "pagoPrincipal" => "$res",
+    "pagoTotal" => "$ ".number_format($pagoTotal, 0, '', '.'),
+    "pagoPrincipal" => "$ ".number_format($res, 0, '', '.'),
     "arrayPagoSucursales" => json_encode($pagoSucursales),
-    "pagoFormularios" => "$totalFormularios",
-    "pagoCertificadosMatricula" => "$valorCerttificadosMatricula",
-    "pagoCertificadosExistencia" => "$valorCertificadosExistencia",
-    "pagoCertificadosEspecial" => "$valorCertificadosEspecial"
+    "pagoFormularios" => "$ ".number_format($totalFormularios, 0, '', '.'),
+    "pagoCertificadosMatricula" => "$ ".number_format($valorCerttificadosMatricula, 0, '', '.'),
+    "pagoCertificadosExistencia" => "$ ".number_format($valorCertificadosExistencia, 0, '', '.'),
+    "pagoCertificadosEspecial" => "$ ".number_format($valorCertificadosEspecial, 0, '', '.'),
         ]);
 
 
