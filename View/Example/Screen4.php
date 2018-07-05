@@ -18,8 +18,18 @@ and open the template in the editor.
     <body class="hold-transition login-page">
 
 
+
+        <form id="frmPDF" name="formPDF" method="post" action="Controller/Example/CtlReport.php" target="_blank">
+            <input type="hidden" name="parte0" id="txtParte0">
+            <input type="hidden" name="parte1" id="txtParte1">
+            <input type="hidden" name="parte2" id="txtParte2">
+            <input type="hidden" name="parte3" id="txtParte3">
+        </form>
+
+
+
         <div class="login-box">
-          
+
             <div class="login-box-body">
 
 
@@ -146,9 +156,9 @@ and open the template in the editor.
                             </div>
                         </div>  
                     </div>
-                    
-                    
-                     <div class="row">
+
+
+                    <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>
@@ -170,7 +180,7 @@ and open the template in the editor.
                             </div>
                         </div>  
                     </div>
-           
+
                 </form>
             </div>
         </div>

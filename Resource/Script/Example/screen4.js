@@ -49,17 +49,22 @@ function queHacerConElResultado(info) {
 
     $("#FormContainer").html(estructuraPagoSucursales);
 
-        
+
     $("#txtPagoTotal").val(info.pagoTotal);
     $("#txtPagoPrincipal").val(info.pagoPrincipal);
     $("#txtPagoFormularios").val(info.pagoFormularios);
     $("#txtPagoCertificadosMatricula").val(info.pagoCertificadosMatricula);
     $("#txtPagoCertificadosExistencia").val(info.pagoCertificadosExistencia);
     $("#txtPagoCertificadoEspecial").val(info.pagoCertificadosEspecial);
+}
 
 
+function imprimir() {
+    
+    $("#txtParte0").val(localStorage['objRenovacionRegistroMercantilSecurity']);
+    $("#txtParte1").val(localStorage['objRenovacionRegistroMercantilScreen1']);
+    $("#txtParte2").val(localStorage['objRenovacionRegistroMercantilScreen2']);
+    $("#txtParte3").val(localStorage['objRenovacionRegistroMercantilScreen3']);
 
-
-
-
+    document.getElementById('frmPDF').submit();
 }
