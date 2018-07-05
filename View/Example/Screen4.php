@@ -20,6 +20,7 @@ and open the template in the editor.
 
 
         <form id="frmPDF" name="formPDF" method="post" action="Controller/Example/CtlReport.php" target="_blank">
+            <input type="hidden" name="action" value="GeneratePDF">
             <input type="hidden" name="parte0" id="txtParte0">
             <input type="hidden" name="parte1" id="txtParte1">
             <input type="hidden" name="parte2" id="txtParte2">

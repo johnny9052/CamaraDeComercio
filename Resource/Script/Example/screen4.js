@@ -42,7 +42,7 @@ function queHacerConElResultado(info) {
     estructuraPagoSucursales = estructuraPagoSucursales + "<div class='row'>\n\
                                                                <div class='col-md-12'>\n\
                                                                   <input type='button' class='btn btn-primary btn-block \n\
-                                                                  btn-flat verdeExaudi' id='btnImprimir' value='Aceptar' onclick='imprimir();'>\n\
+                                                                  btn-flat verdeExaudi' id='btnImprimir' value='Imprimir' onclick='imprimir();'>\n\
                                                                </div>\n\
                                                            </div>";
 
