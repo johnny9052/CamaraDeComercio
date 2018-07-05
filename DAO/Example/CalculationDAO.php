@@ -70,7 +70,7 @@ class CalculationDAO {
         $html2pdf = new HTML2PDF('P', 'A4', 'es');
         $html2pdf->WriteHTML($cadenaHTML); //Lo que tenga content lo pasa a pdf
         ob_end_clean(); // se limpia nuevamente el buffer
-        $html2pdf->Output($vec[0][1] . '.pdf'); //se genera el pdf, generando por defecto el nombre indicado para guardar
+        $html2pdf->Output('example' . '.pdf'); //se genera el pdf, generando por defecto el nombre indicado para guardar
     }
 
 }
